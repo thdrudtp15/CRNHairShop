@@ -1,0 +1,89 @@
+.Complete-wrap {
+  height: 650px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Complete-message {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.Complete-contentBox {
+  width: 800px;
+}
+
+.Complete-info {
+  height: 50px;
+  border: 1px solid #dbdbdb;
+  border-bottom: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lastTag {
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.Complete-title {
+  width: 25%;
+  height: 100%;
+  background: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Complete-text {
+  width: 75%;
+  height: 100%;
+  background: white;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-left: 15px;
+}
+
+.passwordBox {
+  height: 100px;
+}
+
+.passwordText {
+  display: block;
+}
+
+.veryImportant {
+  color: red;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.Complete-password {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.Complete-btnBox {
+  margin-top: 50px;
+  height: 49px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Complete-btnBox .Complete-btn {
+  padding: 10px 35px;
+  background: #3b3b3b;
+  color: white;
+  margin: 0 20px;
+  border: 1px solid black;
+  cursor: pointer;
+  font-size: 20px;
+}
+.Complete-btnBox .Complete-cancel {
+  color: black;
+  background: white;
+}/*# sourceMappingURL=Complete.css.map */

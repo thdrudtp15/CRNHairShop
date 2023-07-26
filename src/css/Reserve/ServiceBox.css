@@ -1,0 +1,164 @@
+.service-wrap {
+  margin-top: 50px;
+  width: 1100px;
+  background: white;
+  border: 1px solid black;
+}
+.service-wrap .service-navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  background: #f8f8f8;
+}
+
+.service-catg {
+  min-width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  margin: 8px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.select-serviceCatg {
+  background: #3b3b3b;
+  color: white;
+  font-weight: 700;
+}
+
+.service-box {
+  width: 33.333333%;
+  height: 65px;
+  display: inline-block;
+  flex-direction: row;
+}
+
+.serviceCheckBox {
+  padding-left: 60px;
+  width: 50%;
+  height: 100%;
+  float: left;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.servicePrice {
+  padding-left: 60px;
+  width: 50%;
+  height: 100%;
+  float: left;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.decision-box {
+  width: 1100px;
+  height: 49px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.decision-box .decision-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 35px;
+  background: #3b3b3b;
+  color: white;
+  margin: 0 20px;
+  border: 1px solid black;
+  cursor: pointer;
+  font-size: 20px;
+}
+.decision-box .backbtn {
+  background: white;
+  color: black;
+}
+
+.privacyinput-box {
+  margin-top: 50px;
+  width: 1100px;
+  height: 200px;
+  border: 1px solid black;
+}
+.privacyinput-box .privacyinput-header {
+  height: 70px;
+  background: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.privacyinput-box .privacyinput-header .privacyinput-headerContent {
+  min-width: 170px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  margin: 8px;
+  border-radius: 20px;
+  background: #3b3b3b;
+  color: white;
+  font-weight: 700;
+}
+.privacyinput-box .privacyinput-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 130px;
+}
+.privacyinput-box .privacyinput-content .input-box {
+  width: 150px;
+  height: 60px;
+  margin: 0px 40px;
+  font-size: 15px;
+  position: relative;
+}
+.privacyinput-box .privacyinput-content .input-box input {
+  border: 1px solid silver;
+  width: 97.5%;
+  font-size: 15px;
+  height: 35px;
+  padding-left: 10px;
+}
+.privacyinput-box .privacyinput-content .input-box input:focus {
+  outline: none;
+  border: 1px solid #3b3b3b;
+}
+.privacyinput-box .privacyinput-content .input-box button {
+  font-size: 14px;
+  height: 39px;
+  position: absolute;
+  right: -90px;
+  top: 0px;
+  cursor: pointer;
+  background: #3b3b3b;
+  color: white;
+  border: none;
+}
+
+.alarm {
+  font-size: 8px;
+  color: rgb(0, 119, 0);
+  width: 165px;
+  display: none;
+}
+
+.denied {
+  display: block;
+  color: red;
+}
+
+.access {
+  display: block;
+}/*# sourceMappingURL=ServiceBox.css.map */

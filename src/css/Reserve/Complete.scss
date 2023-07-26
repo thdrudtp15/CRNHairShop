@@ -1,0 +1,83 @@
+@mixin centerPosition($x,$y){
+    display: flex;
+    justify-content: $x;
+    align-items: $y;
+}
+
+@mixin list($width,$bg,$x){
+    width: $width;
+    height: 100%;
+    background:$bg;
+    @include centerPosition($x,center);
+}
+
+@mixin fontSizeAndWeight($size,$weight){
+    font-size: $size;
+    font-weight: $weight;
+}
+
+.Complete-wrap {
+    height: 650px;
+    @include centerPosition(center,center);
+}
+.Complete-message {
+    text-align: center;
+    @include fontSizeAndWeight(30px,700);
+    margin-bottom: 50px;
+}
+.Complete-contentBox{  
+    width: 800px;
+}
+
+.Complete-info{
+    height: 50px;
+    border: 1px solid #dbdbdb;
+    border-bottom: none;
+    @include centerPosition(center,center );
+}
+
+.lastTag {
+    border-bottom:  1px solid #dbdbdb;  
+}
+
+.Complete-title{
+   @include list(25%, #eee,center);
+}
+.Complete-text{
+    @include list(75%,white,start);
+    padding-left: 15px;
+}
+
+.passwordBox {
+    height: 100px;
+}
+.passwordText {
+    display: block;
+}
+
+.veryImportant {
+    color : red;
+    @include fontSizeAndWeight(10px,bold);
+}
+.Complete-password{
+    @include fontSizeAndWeight(20px,bold);
+}
+.Complete-btnBox{
+   margin-top: 50px;
+   height: 49px;
+   @include centerPosition(center,center);
+
+    .Complete-btn{
+        padding: 10px 35px;
+        background: #3b3b3b;
+        color:white;
+        margin: 0 20px;
+        border: 1px solid black;
+        cursor: pointer;
+        font-size: 20px;
+    }
+    .Complete-cancel {
+        color : black;
+        background: white;
+    }
+}

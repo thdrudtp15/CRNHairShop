@@ -1,0 +1,55 @@
+.Main-ReseveAndPrice{
+    width: 100%;
+    height: 450px;
+    background: #eee;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    .Main-BtnContainer{
+        width: 900px;
+        height: 250px;
+        // background: #eee;
+
+        .Main-BtnBox {
+            width: 33.3%;
+            height: 100%;
+            // background: black;
+            float: left;
+
+            .Main-Btn{
+                width: 100%;
+                height: 100%;
+                // background: gold;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                .Main-BtnBg {
+                    width: 60%;
+                    height: 70%;
+                    border-radius: 150px;
+                    background: coral;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 95px;
+                    color: white;
+                    cursor: pointer;
+                }
+                .Main-BtnText{
+                    width: 100%;
+                    height: 30%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-weight: bold;
+                    font-size: 25px;
+                }
+            }
+        }
+
+    }
+
+}

@@ -1,0 +1,45 @@
+div {
+    box-sizing: border-box;
+}
+
+
+@mixin size($width,$height,$bg){
+    width: $width;
+    height: $height;
+    background: $bg;
+}
+
+@mixin flex(){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.Banner-wrap {
+    @include size(100%,350px,transparent);
+    position: relative;
+}
+
+.Banner-img {
+    @include size(100%,300px,linear-gradient(rgb(77, 38, 250),rgb(168, 167, 212)));
+}
+
+
+.Banner-info {  
+    @include size(100%,40px,transparent);
+    @include flex();
+    position: absolute;
+    top: 280px;
+}
+
+.subCatg-btn {
+    width: 500px;
+    height: 100%;
+    @include flex();
+    background: #eee;
+    color: black;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+}

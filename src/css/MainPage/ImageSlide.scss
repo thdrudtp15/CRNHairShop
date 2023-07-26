@@ -1,0 +1,54 @@
+div {
+    box-sizing: border-box;
+}
+
+.IsContainer{
+    margin: 0 auto;
+    position: relative;
+    height: 900px;
+    width: 100%;
+    overflow: hidden;
+    .IsBox{
+        height: 100%;
+        // background: red;
+        transition: 1s ease;
+    }
+    .IsImg{
+        height: 100%;
+        float: left;
+        // background: rgb(121, 28, 228);
+    }
+}
+
+
+.NumberBtnBox{
+    // background: red;
+    position: absolute;
+    bottom: 150px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    .NumberBtn{
+        height: 9px;
+        width: 50px;
+        cursor: pointer;
+        border: none;
+        margin: 0px 5px;
+    }
+}
+
+.selected {
+    background: rgb(245, 16, 16);
+}
+
+@media screen and (max-width : 556px) {
+    .IsContainer{
+        width: 100% ;
+        height: 400px ;
+    }
+    .NumberBtnBox{
+        bottom: 40px;
+    }
+}

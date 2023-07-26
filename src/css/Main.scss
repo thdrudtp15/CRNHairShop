@@ -1,0 +1,65 @@
+div {
+    box-sizing: border-box;
+}
+
+.sighted {
+    visibility: visible;
+    opacity: 1;
+}
+
+.Main-Image-comment{
+    position: absolute;
+    top : 300px;
+    left: 200px;
+    // background: darkblue;
+    color : white;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.Main-social{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top : 0px;
+    z-index: -1;
+    .d{
+        width: 100%;
+        height: 100vh;
+        margin: 0 auto;
+        background-image: url("https://image.godpia.com/org/biblearea-bg.jpg");
+        background-size: cover;
+        filter: blur(0.2);
+        background-position: 50% 0%;
+        
+    }
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width :996px){
+    .Main-ReseveAndPrice .BtnBox{
+       width: 700px;
+       height: 45%;
+   }
+   .BtnBox .Btn{
+       width: 48%;
+       height: 100%;
+   }
+}
+
+@media screen and (max-width :558px){
+         .Main-ReseveAndPrice .BtnBox{
+            width: 100%;
+            height: 100%;
+        }
+        .BtnBox .Btn{
+            width: 100%;
+            height: 50%;
+        }
+}
