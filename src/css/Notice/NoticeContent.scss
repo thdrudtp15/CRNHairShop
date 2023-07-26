@@ -1,18 +1,22 @@
-@mixin size($height,$width,$fontSize,$color,$fW) {
+@mixin size($width,$x) {
     width: $width;
-    height: $height;
+    height: 100%;
     display: flex;
-    justify-content: start;
+    justify-content: $x;
     align-items: center;
-    font-size: $fontSize;
-    color:$color;
-    font-weight: $fW;
 }
 @mixin centerPosition($x,$y){
     display: flex;
     justify-content: $x;
     align-items: $y;
 }
+
+@mixin mSize($fS,$C,$fW){
+    font-size: $fS;
+    color:$C;
+    font-weight: $fW;
+}
+
 
 
 
@@ -33,36 +37,48 @@
 }
 .notice-list {
     height: 60px;
-    // background: #eee;
     border-bottom: 1px solid silver;
     display: flex;
+    cursor: pointer;
 }
 .notice-type {
-    background: red;
-    @include size(100%,12%,14px,skyblue,700);
+    @include size(12%,start);
 }
 .notice-subject{
-    background: blue;
-    @include size(100%,63% )
+    @include size(63%,start);
 }
 .notice-date {
-    background: yellow;
-    @include size(100%,15% )
+    @include size(15%,start);
 }
-
 .notice-status {
-    background: wheat;
-    @include size(100%,10% )
+    @include size(10%,center);
+    position: relative;
+    .plus {
+        width: 15px;
+        height: 3px;
+        background: black;
+        border-radius: 60px;
+        position: absolute;
+        transition: 0.5s all;
+    }
+    .X {
+        transform: rotate(0);
+    }
+    .Y {
+        transform: rotate(90deg);
+    }
 }
 
-.notice-textPosition {
-    @include centerPosition(start,center);
-}
+
+
 
 
 @media screen and (max-width : 556px) {
     .notice-box{
         width: 480px;
+    }
+    .notice-type {
+        @include mSize(12px,skyblue ,600);
     }
   
 }

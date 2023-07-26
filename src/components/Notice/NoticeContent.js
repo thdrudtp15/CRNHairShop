@@ -24,9 +24,12 @@ function NoticeList() {
   return (
     <div className="notice-list">
       <div className="notice-type">중요공지</div>
-      <div className="notice-subject"></div>
-      <div className="notice-date"></div>
-      <div className="notice-status"></div>
+      <div className="notice-subject">제목입니다 제목입니다.</div>
+      <div className="notice-date">2023.23.23</div>
+      <div className="notice-status">
+        <div className="plus X"></div>
+        <div className="plus Y"></div>
+      </div>
     </div>
   );
 }
