@@ -9,8 +9,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 
 function About() {
-  let { id } = useParams();
-  let { detail } = useParams();
+  let { id, detail } = useParams();
   const [mode, setMode] = useState(false);
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -18,21 +17,42 @@ function About() {
 
   let obj = {
     reserve: (
-      <>
-        <Banner
-          img=""
-          arr={[
-            { name: "예약하기", path: "reserve/reservation" },
-            { name: "예약조회", path: "reserve/reservationcheck" },
-          ]}
-        />
-      </>
+      <Banner
+        img=""
+        arr={[
+          {
+            name: "예약하기",
+            path: "reserve/reservation",
+            id: "reservation",
+          },
+          {
+            name: "예약조회",
+            path: "reserve/reservationcheck",
+            id: "reservationcheck",
+          },
+        ]}
+        param={detail}
+      />
     ),
     notice: (
       <>
-        <Banner img="" arr={[{ name: "공지사항", path: "notice/notice" }]} />
+        <Banner
+          img=""
+          arr={[{ name: "공지사항", path: "notice/notice", id: "notice" }]}
+          param={detail}
+        />
         <NoticeContent />
       </>
+    ),
+    about: (
+      <Banner
+        img=""
+        arr={[
+          { name: "소개", path: "about/about", id: "about" },
+          { name: "위치", path: "about/location", id: "location" },
+        ]}
+        param={detail}
+      />
     ),
   };
 

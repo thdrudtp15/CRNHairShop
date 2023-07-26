@@ -110,7 +110,18 @@ function ReserveContent({ mode, setMode }) {
   if (mode === false) {
     return (
       <div>
-        <ReservationProgress mode={mode} />
+        {/* <ReservationProgress mode={mode} /> */}
+        <div
+          style={{
+            width: 1100,
+            height: 150,
+            border: "1px solid #gray",
+            margin: "0 auto",
+            marginTop: 50,
+          }}
+        >
+          여기다가 뭔가 안내문 같은 거 적으면 좋을듯
+        </div>
         <div className="Content-wrap">
           <div className="scheduleBox">
             <DatePicker
@@ -209,8 +220,3 @@ function Timesec({ arr, tit, setter }) {
     </div>
   );
 }
-
-//나의 예약 시스템 만들기
-// 날짜별로 데이터를 삽입해야 한다.
-// 날짜로 데이터를 조회하며, 해당 날짜의 시간을 오름차순으로 받는다.
-// 오름차순으로 도착한 배열 데이터를 현재 있는 시간과 비교하여
