@@ -21,7 +21,7 @@ function About() {
         img=""
         arr={[
           {
-            name: "예약하기",
+            name: "실시간예약",
             path: "reserve/reservation",
             id: "reservation",
           },
@@ -41,7 +41,6 @@ function About() {
           arr={[{ name: "공지사항", path: "notice/notice", id: "notice" }]}
           param={detail}
         />
-        <NoticeContent />
       </>
     ),
     about: (
@@ -59,7 +58,9 @@ function About() {
   let obj2 = {
     reservation: <ReserveContent setMode={setMode} mode={mode} />,
     reservationcheck: <div>예약 조회</div>,
-    notice: <div>공지사항</div>,
+    notice: <NoticeContent />,
+    about: <div>원장님소개</div>,
+    location: <div>위치는 광주 용두동에 있슴돠</div>,
   };
 
   return (

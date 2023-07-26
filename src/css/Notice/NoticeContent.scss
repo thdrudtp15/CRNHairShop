@@ -1,3 +1,68 @@
+@mixin size($height,$width,$fontSize,$color,$fW) {
+    width: $width;
+    height: $height;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: $fontSize;
+    color:$color;
+    font-weight: $fW;
+}
+@mixin centerPosition($x,$y){
+    display: flex;
+    justify-content: $x;
+    align-items: $y;
+}
+
+
+
 .notice-wrap {
-    
+    height: 800px;
+}
+.notice-box {
+    height: 100%;
+    width: 800px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.notice-title {
+    font-size: 26px;
+    font-weight: 500;
+    height: 60px;
+    border-bottom: 1px solid black;
+}
+.notice-list {
+    height: 60px;
+    // background: #eee;
+    border-bottom: 1px solid silver;
+    display: flex;
+}
+.notice-type {
+    background: red;
+    @include size(100%,12%,14px,skyblue,700);
+}
+.notice-subject{
+    background: blue;
+    @include size(100%,63% )
+}
+.notice-date {
+    background: yellow;
+    @include size(100%,15% )
+}
+
+.notice-status {
+    background: wheat;
+    @include size(100%,10% )
+}
+
+.notice-textPosition {
+    @include centerPosition(start,center);
+}
+
+
+@media screen and (max-width : 556px) {
+    .notice-box{
+        width: 480px;
+    }
+  
 }
