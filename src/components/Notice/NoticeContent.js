@@ -1,6 +1,6 @@
-import { useState } from "react";
+import axios from "axios";
+import { useEffect, useState } from "react";
 import "../../css/Notice/NoticeContent.css";
-import data from "../MainPage/data";
 
 function NoticeContent() {
   //============
@@ -10,10 +10,11 @@ function NoticeContent() {
   return (
     <div className="notice-wrap">
       <div className="notice-box">
+        <div className="최근공지">최근공지</div>
         <div className="notice-title">
           <span>공지사항</span>
         </div>
-        <NoticeList data={data} />
+        <NoticeList />
       </div>
     </div>
   );
@@ -21,15 +22,16 @@ function NoticeContent() {
 
 export default NoticeContent;
 
-function NoticeList({ data }) {
-  const [openStatus, setOpenStatus] = useState(
-    data.map((e, i) => {
-      return { id: e.id, status: false };
-    })
-  );
+function NoticeList() {
+  const [data, setData] = useState([]);
+  const [openStatus, setOpenStatus] = useState([]);
+  const [nowPage, setNowPage] = useState(1);
+  const [pages, setPages] = useState([]);
+
+  const wishCount = 3;
 
   const openNotice = (i) => {
-    if (openStatus[i].status == false) {
+    if (openStatus[i].status === false) {
       setOpenStatus((prev) => {
         return prev.map((a) => {
           return a.id === i ? { ...a, status: true } : { ...a, status: false };
@@ -44,6 +46,41 @@ function NoticeList({ data }) {
     }
   };
 
+  useEffect(() => {
+    axios
+      .get("/notice/get", {})
+      .then((res) => {
+        console.log(res.data);
+        setData(res.data);
+        setOpenStatus(
+          res.data.map((e, i) => {
+            return { id: i, status: false };
+          })
+        );
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  }, [nowPage]);
+
+  useEffect(() => {
+    axios
+      .get("/notice/count", {})
+      .then((res) => {
+        let totalCount = res.data;
+        let totalPage = Math.ceil(totalCount / wishCount);
+        let arr = [];
+        for (let i = 1; i <= totalPage; i++) {
+          arr.push(i);
+        }
+        setPages(arr);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  }, []);
+
+  console.log(openStatus);
   return (
     <div>
       {data.map((a, i) => {
@@ -56,9 +93,13 @@ function NoticeList({ data }) {
             }}
           >
             <div className="notice-bar">
-              <div className="notice-type">중요공지</div>
-              <div className="notice-subject">{a.title}</div>
-              <div className="notice-date">2023.02.34</div>
+              <div className="notice-type">{a.type}</div>
+              <div className="notice-subject">
+                <span className={`subject ${openStatus[i].status && "opeN"}`}>
+                  {a.subject}
+                </span>
+              </div>
+              <div className="notice-date">{a.date}</div>
               <div className="notice-status">
                 <div className="plus X"></div>
                 <div
@@ -72,36 +113,11 @@ function NoticeList({ data }) {
           </div>
         );
       })}
+      <div>
+        {pages.map((a, i) => {
+          return <div>{a}</div>;
+        })}
+      </div>
     </div>
-    // <div
-    //   className="notice-list"
-    //   onClick={() => {
-    //     openNotice();
-    //   }}
-    // >
-    //   <div className="notice-bar">
-    //     <div className="notice-type">중요공지</div>
-    //     <div className="notice-subject">제목입니다 제목입니다.</div>
-    //     <div className="notice-date">2023.23.23</div>
-    //     <div className="notice-status">
-    //       <div className="plus X"></div>
-    //       <div className={`plus Y ${plusStatus[0].status && "open"}`}></div>
-    //     </div>
-    //   </div>
-    //   <div className="notice-detail">
-    //     <div className="notice-content">
-    //       <p>공지사항전달</p>
-    //       <span>오늘은 휴업입니다.</span>
-    //       <p>공지사항전달</p>
-    //       <span>오늘은 휴업입니다.</span>
-    //       <p>공지사항전달</p>
-    //       <span>오늘은 휴업입니다.</span>
-    //       <p>공지사항전달</p>
-    //       <span>오늘은 휴업입니다.</span>
-    //       <p>공지사항전달</p>
-    //       <span>오늘은 휴업입니다.</span>
-    //     </div>
-    //   </div>
-    // </div>
   );
 }

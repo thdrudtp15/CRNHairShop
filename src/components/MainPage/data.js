@@ -9,6 +9,7 @@ let data = [
     date: "2002-02-03",
     viewcount: 0,
     writer: "관리자",
+    type: "중요공지",
   },
   {
     id: 1,
@@ -17,6 +18,7 @@ let data = [
     date: "2002-02-03",
     viewcount: 0,
     writer: "관리자",
+    type: "중요공지",
   },
   {
     id: 2,
@@ -25,6 +27,7 @@ let data = [
     date: "2002-02-03",
     viewcount: 0,
     writer: "관리자",
+    type: "일반공지",
   },
   {
     id: 3,
@@ -34,6 +37,7 @@ let data = [
     date: "2002-02-03",
     viewcount: 0,
     writer: "관리자",
+    type: "신규공지",
   },
   {
     id: 4,
@@ -42,6 +46,7 @@ let data = [
     date: "2002-02-03",
     viewcount: 0,
     writer: "관리자",
+    type: "일반공지",
   },
 ];
 
