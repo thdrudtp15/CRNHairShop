@@ -137,4 +137,19 @@
     width: 400px;
     font-size: 12px;
   }
+}
+.notice-pageing {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.notice-pageing .pageNum {
+  width: 30px;
+  height: 40px;
+  font-size: 19px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=NoticeContent.css.map */

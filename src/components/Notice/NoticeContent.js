@@ -3,10 +3,6 @@ import { useEffect, useState } from "react";
 import "../../css/Notice/NoticeContent.css";
 
 function NoticeContent() {
-  //============
-  // 임시 데이터
-  //============
-  // console.log(data);
   return (
     <div className="notice-wrap">
       <div className="notice-box">
@@ -80,6 +76,11 @@ function NoticeList() {
       });
   }, []);
 
+  const onChangeNowPage = (num) => {
+    console.log(num);
+    setNowPage(num);
+  };
+
   console.log(openStatus);
   return (
     <div>
@@ -113,9 +114,18 @@ function NoticeList() {
           </div>
         );
       })}
-      <div>
+      <div className="notice-pageing">
         {pages.map((a, i) => {
-          return <div>{a}</div>;
+          return (
+            <span
+              className="pageNum"
+              onClick={() => {
+                onChangeNowPage(i);
+              }}
+            >
+              {a}
+            </span>
+          );
         })}
       </div>
     </div>

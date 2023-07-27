@@ -133,3 +133,17 @@
         @include mSize(12px);
     }
 }
+
+.notice-pageing {
+    width: 100%;
+    @include centerPosition(center,center);
+    .pageNum {
+        width : 30px;
+        height: 40px;
+        font-size: 19px;
+        // background: red;
+        cursor: pointer;
+        @include centerPosition(center,center );
+    
+    }
+}
