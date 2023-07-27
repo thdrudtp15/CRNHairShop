@@ -1,5 +1,5 @@
 .notice-wrap {
-  height: 800px;
+  min-height: 800px;
 }
 
 .notice-box {
@@ -16,11 +16,29 @@
   border-bottom: 1px solid black;
 }
 
-.notice-list {
+.notice-bar {
   height: 60px;
   border-bottom: 1px solid silver;
   display: flex;
   cursor: pointer;
+}
+
+.notice-detail {
+  overflow: hidden;
+  border-bottom: 1px solid silver;
+  max-height: 0px;
+  visibility: hidden;
+  transition: 0.5s ease;
+}
+.notice-detail .notice-content {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 600px;
+}
+
+.Open {
+  visibility: visible;
+  max-height: 500px;
 }
 
 .notice-type {
@@ -29,6 +47,8 @@
   display: flex;
   justify-content: start;
   align-items: center;
+  color: rgb(114, 6, 255);
+  font-weight: 700;
 }
 
 .notice-subject {
@@ -37,6 +57,8 @@
   display: flex;
   justify-content: start;
   align-items: center;
+  color: black;
+  font-weight: 500;
 }
 
 .notice-date {
@@ -45,6 +67,8 @@
   display: flex;
   justify-content: start;
   align-items: center;
+  color: black;
+  font-weight: 500;
 }
 
 .notice-status {
@@ -53,6 +77,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: black;
+  font-weight: 500;
   position: relative;
 }
 .notice-status .plus {
@@ -61,13 +87,17 @@
   background: black;
   border-radius: 60px;
   position: absolute;
-  transition: 0.5s all;
+  transition: 0.5s ease;
 }
 .notice-status .X {
   transform: rotate(0);
 }
 .notice-status .Y {
   transform: rotate(90deg);
+}
+.notice-status .open {
+  transform: rotate(0deg);
+  background: rgb(104, 104, 245);
 }
 
 @media screen and (max-width: 556px) {
@@ -76,7 +106,5 @@
   }
   .notice-type {
     font-size: 12px;
-    color: skyblue;
-    font-weight: 600;
   }
 }/*# sourceMappingURL=NoticeContent.css.map */

@@ -114,13 +114,14 @@ function ReserveContent({ mode, setMode }) {
         <div
           style={{
             width: 1100,
-            height: 150,
-            border: "1px solid #gray",
+            height: 100,
+            border: "1px solid gray",
             margin: "0 auto",
             marginTop: 50,
           }}
         >
-          여기다가 뭔가 안내문 같은 거 적으면 좋을듯
+          여기다가 뭔가 안내문 같은 거 적으면 좋을듯 매주 화요일 휴무 점심시간
+          같은 거?
         </div>
         <div className="Content-wrap">
           <div className="scheduleBox">
