@@ -4,6 +4,7 @@ import ReserveContent from "../components/Reserve/ReserveContent";
 import ReservationProgress from "../components/Reserve/ReservavtionProgress";
 import Footer from "../components/MainPage/Footer";
 import NoticeContent from "../components/Notice/NoticeContent";
+import ShopLocation from "../components/About/ShopLoaction/ShopLocation";
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
@@ -60,7 +61,7 @@ function About() {
     reservationcheck: <div>예약 조회</div>,
     notice: <NoticeContent />,
     about: <div>원장님소개</div>,
-    location: <div>위치는 광주 용두동에 있슴돠</div>,
+    location: <ShopLocation />,
   };
 
   return (

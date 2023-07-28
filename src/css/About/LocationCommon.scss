@@ -1,0 +1,23 @@
+
+@mixin positionCenter($x,$y){
+    display: flex;
+    justify-content: $x;
+    align-items: $y;
+}
+
+.location-wrap {
+    width: 1100px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+.location-title {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+@media screen and (max-width : 556px) {
+ .location-wrap{
+    width: 470px;
+ }   
+}
