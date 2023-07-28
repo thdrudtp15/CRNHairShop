@@ -1,8 +1,8 @@
 import { fireEvent } from "@testing-library/react";
+import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../../css/MainPage/Notice.css";
-import data from "./data";
 
 //==============================
 //공지사항 같은 경우는 백엔드 작업이 필요함.
@@ -10,7 +10,7 @@ import data from "./data";
 //==============================
 
 function Notice() {
-  const [NoticeData, setData] = useState(data);
+  const [NoticeData, setData] = useState([]);
   const navigate = useNavigate();
   useEffect(() => {
     let scrollEvent = function () {
@@ -39,6 +39,22 @@ function Notice() {
     };
   }, []);
 
+  useEffect(() => {
+    axios
+      .get("/notice/get", {
+        params: {
+          size: 5,
+          page: 0,
+        },
+      })
+      .then((res) => {
+        setData(res.data.content);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  }, []);
+
   return (
     <div className="Notice-container">
       <div className="공지사항미리보기박스">
@@ -51,7 +67,7 @@ function Notice() {
                 <div className="날짜">{a.date}</div>
               </div>
               <div className="제목및내용">
-                <div className="공지제목">{a.title}</div>
+                <div className="공지제목">{a.subject}</div>
                 <div className="공지내용">{a.content}</div>
               </div>
             </div>
@@ -60,7 +76,7 @@ function Notice() {
         <button
           className="자세히보기"
           onClick={() => {
-            navigate("/NOTICE");
+            navigate("/notice/notice");
           }}
         >
           자세히보기

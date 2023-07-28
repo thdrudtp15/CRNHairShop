@@ -1,6 +1,6 @@
 .notice-wrap {
-  min-height: 800px;
-  margin-top: 100px;
+  min-height: 750px;
+  margin-top: 50px;
   transition: 0.5s ease;
 }
 
@@ -47,15 +47,21 @@
   font-weight: 600;
 }
 
+.oPEN {
+  text-decoration: underline;
+  font-weight: 600;
+}
+
 .notice-type {
   width: 12%;
   height: 100%;
   display: flex;
   justify-content: start;
   align-items: center;
-  color: rgb(83, 83, 83);
+  color: rgb(255, 98, 98);
   font-weight: 700;
   overflow: hidden;
+  font-size: 18px;
 }
 
 .notice-subject {
@@ -75,7 +81,7 @@
   display: flex;
   justify-content: start;
   align-items: center;
-  color: black;
+  color: rgba(128, 128, 128, 0.432);
   font-weight: 500;
   overflow: hidden;
 }
@@ -115,29 +121,6 @@
   text-overflow: ellipsis;
 }
 
-@media screen and (max-width: 556px) {
-  .notice-wrap {
-    min-height: 700px;
-    margin-top: 0px;
-  }
-  .notice-box {
-    width: 480px;
-    padding: 10px;
-  }
-  .notice-type {
-    font-size: 12px;
-  }
-  .subject {
-    font-size: 12px;
-  }
-  .notice-date {
-    font-size: 12px;
-  }
-  .notice-content {
-    width: 400px;
-    font-size: 12px;
-  }
-}
 .notice-pageing {
   width: 100%;
   display: flex;
@@ -152,4 +135,49 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.notice-pageing .seqBtn {
+  cursor: pointer;
+}
+
+.nonexistentData {
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+  border-bottom: 1px solid silver;
+}
+
+.noticeLoading {
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+  border-bottom: 1px solid silver;
+}
+
+@media screen and (max-width: 556px) {
+  .notice-wrap {
+    min-height: 700px;
+    margin-top: 0px;
+  }
+  .notice-box {
+    width: 480px;
+    padding: 10px;
+  }
+  .notice-type {
+    font-size: 11px;
+  }
+  .subject {
+    font-size: 12px;
+  }
+  .notice-date {
+    font-size: 12px;
+  }
+  .notice-content {
+    width: 400px;
+    font-size: 12px;
+  }
 }/*# sourceMappingURL=NoticeContent.css.map */
