@@ -94,7 +94,6 @@ const Navbar = () => {
         <div className="Navbar-category-wrap">
           <div className="Navbar-categorybox">
             <NavLinkLSize text="ABOUT" navigate={navigate} nav="about/about" />
-            <NavLinkLSize text="PRICE" navigate={navigate} nav="price/price" />
             <NavLinkLSize
               text="RESERVE"
               navigate={navigate}

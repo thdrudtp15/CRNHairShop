@@ -16,3 +16,18 @@
     background: red;
     @include positionCenter(center,center );
 }
+.explanation-text{
+    width: 60%;
+    height: 100%;
+    background: blue;
+}
+
+
+@media screen and (max-width : 556px) {
+    .explanation-icon{
+        width: 35%;
+    }   
+    .explanation-text{
+        width: 65%;
+    }
+   }

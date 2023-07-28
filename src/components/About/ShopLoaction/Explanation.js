@@ -4,6 +4,7 @@ function Explanation() {
   return (
     <div className="explanation-wrap">
       <div className="explanation-icon"></div>
+      <div className="explanation-text"></div>
     </div>
   );
 }
