@@ -161,4 +161,43 @@
 
 .access {
   display: block;
+}
+
+@media screen and (max-width: 556px) {
+  .service-wrap {
+    width: 470px;
+  }
+  .service-box {
+    width: 50%;
+  }
+  .serviceCheckBox {
+    padding-left: 10px;
+    font-size: 14px;
+  }
+  .servicePrice {
+    font-size: 14px;
+  }
+  .decision-box {
+    width: 470px;
+  }
+  .decision-box .decision-btn {
+    font-size: 12px;
+  }
+  .privacyinput-box {
+    width: 470px;
+  }
+  .privacyinput-box .privacyinput-content .input-box {
+    margin: 0px 40px;
+  }
+  .privacyinput-box .privacyinput-content .input-box input {
+    font-size: 9px;
+  }
+  .privacyinput-box .privacyinput-content .input-box button {
+    right: -35px;
+    top: 0px;
+    font-size: 5px;
+  }
+  .alarm {
+    width: 70px;
+  }
 }/*# sourceMappingURL=ServiceBox.css.map */

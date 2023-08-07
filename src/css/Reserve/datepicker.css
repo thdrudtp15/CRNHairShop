@@ -100,3 +100,10 @@
 .react-datepicker__day--keyboard-selected{
     background: transparent !important;
 }
+
+
+@media screen and (max-width : 556px) {
+    .react-datepicker{
+        width: 470px;
+    }
+}

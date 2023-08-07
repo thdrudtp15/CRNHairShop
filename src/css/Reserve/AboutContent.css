@@ -98,4 +98,20 @@ div {
   width: 100%;
   height: 200px;
   background: salmon;
+}
+
+@media screen and (max-width: 556px) {
+  .Content-wrap {
+    width: 470px;
+  }
+  .scheduleBox {
+    flex-direction: column;
+    height: 950px;
+    border: none;
+  }
+  .scheduleBox .timeSelectBox {
+    width: 470px;
+    padding: 10px 10px;
+    border: 1px solid black;
+  }
 }/*# sourceMappingURL=AboutContent.css.map */

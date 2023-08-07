@@ -19,7 +19,8 @@ function About() {
   let obj = {
     reserve: (
       <Banner
-        img=""
+        img="http://riahn.co.kr/niabbs5/images_2022/subimg5.jpg"
+        text="RESERVE"
         arr={[
           {
             name: "실시간예약",
@@ -38,7 +39,8 @@ function About() {
     notice: (
       <>
         <Banner
-          img=""
+          img="http://riahn.co.kr/niabbs5/images_2022/subimg3.jpg"
+          text="NOTICE"
           arr={[{ name: "공지사항", path: "notice/notice", id: "notice" }]}
           param={detail}
         />
@@ -46,7 +48,8 @@ function About() {
     ),
     about: (
       <Banner
-        img=""
+        img="http://riahn.co.kr/niabbs5/images_2022/subimg1.png"
+        text="ABOUT"
         arr={[
           { name: "소개", path: "about/about", id: "about" },
           { name: "위치", path: "about/location", id: "location" },

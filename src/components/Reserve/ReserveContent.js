@@ -111,7 +111,7 @@ function ReserveContent({ mode, setMode }) {
     return (
       <div>
         {/* <ReservationProgress mode={mode} /> */}
-        <div
+        {/* <div
           style={{
             width: 1100,
             height: 100,
@@ -122,7 +122,7 @@ function ReserveContent({ mode, setMode }) {
         >
           여기다가 뭔가 안내문 같은 거 적으면 좋을듯 매주 화요일 휴무 점심시간
           같은 거?
-        </div>
+        </div> */}
         <div className="Content-wrap">
           <div className="scheduleBox">
             <DatePicker

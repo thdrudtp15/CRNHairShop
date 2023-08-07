@@ -2,7 +2,7 @@ import "../../css/Reserve/Banner.css";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 
-function Banner({ img, arr, param }) {
+function Banner({ img, arr, param, text }) {
   const navigate = useNavigate();
   useEffect(() => {
     const t = document.querySelectorAll(".subCatg-btn");
@@ -15,7 +15,10 @@ function Banner({ img, arr, param }) {
 
   return (
     <div className="Banner-wrap">
-      <div className="Banner-img"></div>
+      <div className="Banner-img">
+        <div className="Banner-text">{text}</div>
+        <img src={img} alt="" />
+      </div>
       <div className="Banner-info">
         {arr.map((a, i) => (
           <div

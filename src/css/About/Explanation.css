@@ -2,7 +2,7 @@
   margin-top: 15px;
   width: 100%;
   height: 150px;
-  background: coral;
+  background: #eee;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,16 +11,23 @@
 .explanation-icon {
   width: 15%;
   height: 100%;
-  background: red;
+  font-size: 90px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .explanation-text {
-  width: 60%;
+  width: 70%;
   height: 100%;
-  background: blue;
+  padding-left: 50px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.explanation-text div {
+  font-size: 19px;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 556px) {
@@ -29,5 +36,9 @@
   }
   .explanation-text {
     width: 65%;
+    padding-left: 0px;
+  }
+  .explanation-text div {
+    font-size: 14px;
   }
 }/*# sourceMappingURL=Explanation.css.map */

@@ -7,6 +7,7 @@ function Map() {
     const options = {
       center: new kakao.maps.LatLng(35.21905365170078, 126.87755511025372),
       level: 3,
+      draggable: false,
     };
     const map = new kakao.maps.Map(container, options);
 
