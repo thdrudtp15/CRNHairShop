@@ -1,4 +1,4 @@
-import "../../css/Reserve/Banner.css";
+import "../../css/Common/Banner.css";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 
@@ -15,9 +15,8 @@ function Banner({ img, arr, param, text }) {
 
   return (
     <div className="Banner-wrap">
-      <div className="Banner-img">
+      <div className="Banner-img" style={{ background: `url(${img})` }}>
         <div className="Banner-text">{text}</div>
-        <img src={img} alt="" />
       </div>
       <div className="Banner-info">
         {arr.map((a, i) => (

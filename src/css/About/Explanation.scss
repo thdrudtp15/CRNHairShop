@@ -7,13 +7,14 @@
     margin-top: 15px;
     width: 100%;
     height: 150px;
-    background: #eee;
+    background: #333;
     @include positionCenter(center,center)
 }
 .explanation-icon{
     width: 15%;
     height: 100%;
     font-size: 90px;
+    color :white;
     @include positionCenter(center,center );
 }
 .explanation-text{
@@ -23,6 +24,7 @@
     @include positionCenter(start,center );
 
      div {
+        color : white;
         font-size: 19px;
         font-weight: bold;
      }

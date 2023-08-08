@@ -1,4 +1,4 @@
-import "../../css/Reserve/AboutContent.css";
+import "../../css/Reserve/ReserveContent.css";
 import "../../css/Reserve/datepicker.css";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";

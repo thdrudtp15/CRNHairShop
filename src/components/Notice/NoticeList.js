@@ -60,6 +60,7 @@ function NoticeList() {
       })
       .catch((e) => {
         alert("네트워크 통신이 원활하지 않습니다!");
+        setLoading(true);
         console.log(e);
       });
   }, [nowPage]);
@@ -87,7 +88,7 @@ function NoticeList() {
         <div className="nonexistentData">공지사항이 없습니다.</div>
       )}
       {loading === false && (
-        <div className="noticeLoading">로딩중입니다....</div>
+        <div className="noticeLoading">잠시만 기다려주세요.</div>
       )}
       {data.map((a, i) => {
         return (
@@ -120,14 +121,16 @@ function NoticeList() {
         );
       })}
       <div className="notice-pageing">
-        <div
-          className="seqBtn"
-          onClick={() => {
-            onChangeNowPageSeq("prev");
-          }}
-        >
-          이전
-        </div>
+        {pages.length !== 0 && (
+          <div
+            className="seqBtn"
+            onClick={() => {
+              onChangeNowPageSeq("prev");
+            }}
+          >
+            이전
+          </div>
+        )}
         {pages.map((a, i) => {
           return (
             <span
@@ -141,14 +144,17 @@ function NoticeList() {
             </span>
           );
         })}
-        <div
-          className="seqBtn"
-          onClick={() => {
-            onChangeNowPageSeq("next");
-          }}
-        >
-          다음
-        </div>
+        {pages.length !==
+        (
+          <div
+            className="seqBtn"
+            onClick={() => {
+              onChangeNowPageSeq("next");
+            }}
+          >
+            다음
+          </div>
+        )}
       </div>
     </div>
   );
