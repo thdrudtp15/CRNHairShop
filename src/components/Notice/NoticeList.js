@@ -68,7 +68,6 @@ function NoticeList() {
   const onChangeNowPage = (num) => {
     setNowPage(num);
   };
-
   const onChangeNowPageSeq = (type) => {
     if (type === "prev") {
       if (nowPage > 0) {
@@ -81,9 +80,27 @@ function NoticeList() {
     }
   };
 
+  // function 공지입력() {
+  //   axios
+  //     .post("/notice/write", {})
+  //     .then((res) => {
+  //       console.log(res.data);
+  //     })
+  //     .catch((e) => {
+  //       console.log(e);
+  //     });
+  // }
+
   console.log(data);
   return (
     <div>
+      {/* <button
+        onClick={() => {
+          공지입력();
+        }}
+      >
+        버튼
+      </button> */}
       {data.length === 0 && (
         <div className="nonexistentData">공지사항이 없습니다.</div>
       )}
@@ -144,8 +161,7 @@ function NoticeList() {
             </span>
           );
         })}
-        {pages.length !==
-        (
+        {pages.length !== 0 && (
           <div
             className="seqBtn"
             onClick={() => {

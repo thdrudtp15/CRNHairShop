@@ -51,6 +51,12 @@
     font-size: 1.1rem !important;
     color: white !important;
 }
+.sunday {
+    color:red !important;
+}
+.saturday{
+    color :blue !important;
+}
 .react-datepicker__day--disabled {
     color : #7a7a7a !important;
 }
@@ -102,8 +108,12 @@
 }
 
 
+
+
+
 @media screen and (max-width : 556px) {
     .react-datepicker{
         width: 470px;
+        height: 500px;
     }
 }

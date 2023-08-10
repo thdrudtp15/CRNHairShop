@@ -7,7 +7,7 @@ import "../../../css/About/LocationCommon.css";
 const ShopLocation = () => {
   return (
     <div className="location-wrap">
-      <div className="location-title">오시는길</div>
+      <div className="location-title">CONTECT</div>
       <Map />
       <Explanation />
       <Transport />

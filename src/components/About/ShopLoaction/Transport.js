@@ -5,21 +5,33 @@ import { BsCarFrontFill, BsBusFrontFill } from "react-icons/bs";
 function Transport() {
   return (
     <div className="transport-wrap">
-      <Trst text="자가용" logo={<BsCarFrontFill />} extext={<Cartext />} />
-      <Trst text="버스" logo={<BsBusFrontFill />} extext={<BusText />} />
+      <Trst
+        text="자가용"
+        logo={<BsCarFrontFill />}
+        extext={<Cartext />}
+        color={"green"}
+      />
+      <Trst
+        text="버스"
+        logo={<BsBusFrontFill />}
+        extext={<BusText />}
+        color={"skyblue"}
+      />
     </div>
   );
 }
 
 export default Transport;
 
-function Trst({ text, logo, extext }) {
+function Trst({ logo, extext, color }) {
   return (
     <div className="transport-box">
       <span className="transport-logo">
         <div className="trstcircle-box">
-          <div className="trstcircle">{logo}</div>
-          <div className="trsttext">{text}</div>
+          <div className="trstcircle" style={{ color: color }}>
+            {logo}
+          </div>
+          <div className="trsttext"></div>
         </div>
       </span>
       {extext}
@@ -38,7 +50,7 @@ function Cartext() {
 
 function BusText() {
   return (
-    <div className="btcont">
+    <div className="btcont" style={{ position: "relative", top: 10 }}>
       <div className="btbox">
         <div className="bus jisun">지선</div>
         <span>금남57 양산60 용전85 용전84</span>

@@ -17,12 +17,12 @@ div {
 
 
 .Banner-wrap {
-    @include size(100%,400px,transparent);
+    @include size(100%,480px,transparent);
     position: relative;
 }
 
 .Banner-img {
-    @include size(100%,350px,transparent);
+    @include size(100%,400px,transparent);
     position: relative;
     background-size: cover;
     background-repeat: no-repeat;
@@ -31,10 +31,12 @@ div {
 
 
 .Banner-info {  
-    @include size(100%,45px,#eee);
+    @include size(100%,80px,white);
     @include flex();
     position: absolute;
     bottom: 50px;
+    box-shadow: 0px 0px 15px 0px silver;
+    // border-bottom: 1px solid silver;
 }
 
 .Banner-text {
@@ -51,20 +53,21 @@ div {
     width: 300px;
     height: 100%;
     @include flex();
-    background: #eee;
+    background: white;
     color: black;
     text-align: center;
     cursor: pointer;
     box-sizing: border-box;
     border-bottom: 4px solid transparent;
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 20px;
+    // font-weight: bold;
 }
 
 
 
 .selectTool {
-    border-bottom: 4px solid red;
+    border-bottom: 4px solid coral;
+    font-weight: bold;
 }
 
 

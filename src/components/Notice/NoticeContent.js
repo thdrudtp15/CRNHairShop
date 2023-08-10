@@ -4,23 +4,12 @@ import "../../css/Notice/NoticeContent.css";
 import NoticeList from "./NoticeList";
 
 function NoticeContent() {
-  // useEffect(() => {
-  //   axios
-  //     .post("http://localhost:8080/notice/write", {})
-  //     .then((res) => {
-  //       console.log(res.data);
-  //     })
-  //     .catch((e) => {
-  //       console.log(e);
-  //     });
-  // }, []);
   return (
     <div className="notice-wrap">
+      {/* <div className="location-title">공지사항</div> */}
       <div className="notice-box">
-        <div className="최근공지">최근공지</div>
-        <div className="notice-title">
-          <span>공지사항</span>
-        </div>
+        {/* <div className="lastestNotice">최근공지</div> */}
+        <div className="notice-title"></div>
         <NoticeList />
       </div>
     </div>

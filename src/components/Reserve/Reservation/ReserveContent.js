@@ -1,5 +1,5 @@
-import "../../css/Reserve/ReserveContent.css";
-import "../../css/Reserve/datepicker.css";
+import "../../../css/Reserve/ReserveContent.css";
+import "../../../css/Reserve/datepicker.css";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useEffect, useState } from "react";
@@ -7,7 +7,7 @@ import ko from "date-fns/locale/ko";
 import axios from "axios";
 import ServiceBox from "./ServiceBox";
 import Complete from "./Complete";
-import ReservationProgress from "./ReservavtionProgress";
+import Schedule from "./Schedule";
 
 //7.6 오류
 // innerHTML을 state로 바꿨더니 오류 발생
@@ -49,12 +49,6 @@ function ReserveContent({ mode, setMode }) {
     { time: "05:30", res: false },
     { time: "06:00", res: false },
   ]);
-
-  const 지난날제외 = (date) => {
-    return (
-      date >= new Date() || date.toDateString() === new Date().toDateString()
-    );
-  };
 
   const onChnageTime = (time, tit, e) => {
     setSelectTime(time);
@@ -124,7 +118,7 @@ function ReserveContent({ mode, setMode }) {
           같은 거?
         </div> */}
         <div className="Content-wrap">
-          <div className="scheduleBox">
+          {/* <div className="scheduleBox">
             <DatePicker
               selected={selectDate}
               onChange={(date) => onChnageDate(date)}
@@ -151,10 +145,17 @@ function ReserveContent({ mode, setMode }) {
                 </div>
               </div>
               <Timesec arr={오전} tit="오전" setter={onChnageTime} />
-
               <Timesec arr={오후} tit="오후" setter={onChnageTime} />
             </div>
-          </div>
+          </div> */}
+          <Schedule
+            selectDate={selectDate}
+            selectTime={selectTime}
+            오전={오전}
+            오후={오후}
+            onChnageDate={onChnageDate}
+            onChnageTime={onChnageTime}
+          />
           <ServiceBox
             selectDate={selectDate}
             selectTime={selectTime}
