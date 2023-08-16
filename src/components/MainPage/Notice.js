@@ -17,7 +17,7 @@ function Notice() {
       const title = document.querySelector(".제목");
       const noticeArr = document.querySelectorAll(".공지");
 
-      if (this.scrollY >= 1500) {
+      if (this.scrollY >= 1400) {
         title.classList.add("제목올려");
       } else {
         title.classList.remove("제목올려");

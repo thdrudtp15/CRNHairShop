@@ -81,3 +81,11 @@
         background: white;
     }
 }
+
+@media screen and (max-width : 556px) {
+    .Complete-btnBox {
+        .Complete-btn {
+            font-size: 14px;
+        }
+    }
+}

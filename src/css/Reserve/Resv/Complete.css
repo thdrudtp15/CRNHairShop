@@ -86,4 +86,10 @@
 .Complete-btnBox .Complete-cancel {
   color: black;
   background: white;
+}
+
+@media screen and (max-width: 556px) {
+  .Complete-btnBox .Complete-btn {
+    font-size: 14px;
+  }
 }/*# sourceMappingURL=Complete.css.map */

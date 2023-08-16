@@ -4,6 +4,7 @@ import ReserveContent from "../components/Reserve/Reservation/ReserveContent";
 import Footer from "../components/MainPage/Footer";
 import NoticeContent from "../components/Notice/NoticeContent";
 import ShopLocation from "../components/About/ShopLoaction/ShopLocation";
+import ResvInqContent from "../components/Reserve/ReservationInquiry/ResvInqContent";
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
@@ -60,7 +61,7 @@ function About() {
 
   let obj2 = {
     reservation: <ReserveContent setMode={setMode} mode={mode} />,
-    reservationcheck: <div>예약 조회</div>,
+    reservationcheck: <ResvInqContent />,
     notice: <NoticeContent />,
     about: <div>원장님소개</div>,
     location: <ShopLocation />,

@@ -1,4 +1,4 @@
-import "../../../css/Reserve/Complete.css";
+import "../../../css/Reserve/Resv/Complete.css";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 function Complete({

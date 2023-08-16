@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import { useNavigate, Navigate, useSearchParams } from "react-router-dom";
-import "../../../css/Reserve/ServiceBox.css";
+import "../../../css/Reserve/Resv/ServiceBox.css";
 import serviceCatg from "./serviceCatg";
 import serviceData from "./serviceData";
 import axios from "axios";

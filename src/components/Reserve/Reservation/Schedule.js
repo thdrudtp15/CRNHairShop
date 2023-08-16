@@ -1,5 +1,5 @@
-import "../../../css/Reserve/ReserveContent.css";
-import "../../../css/Reserve/datepicker.css";
+import "../../../css/Reserve/Resv/ReserveContent.css";
+import "../../../css/Reserve/Resv/datepicker.css";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import ko from "date-fns/locale/ko";
