@@ -92,7 +92,6 @@ function ServiceBox({
         if (res.data >= 1) {
           alert("중복되는 코드가 존재합니다.");
         } else {
-          console.log(res.data);
           alert("중복확인이 완료되었습니다.");
           setCheckCode(true);
         }

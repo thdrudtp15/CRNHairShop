@@ -1,4 +1,25 @@
 .resvInq-box {
+  width: 70%;
+  margin: 0 auto;
+  min-height: 350px;
+}
+.resvInq-box .Complete-infoBox:last-child {
+  border-bottom: 1px solid #dbdbdb;
+}
+
+#inq-input {
+  height: 70%;
+  outline: none;
   width: 100%;
-  height: 500px;
+  border: none;
+}
+
+.inq-content {
+  font-weight: 600;
+}
+
+@media screen and (max-width: 556px) {
+  .resvInq-box {
+    width: 100%;
+  }
 }/*# sourceMappingURL=ResvInq.css.map */

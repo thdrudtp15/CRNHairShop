@@ -7,22 +7,6 @@ import Notice from "../components/MainPage/Notice";
 import Toolbar from "../components/MainPage/Toolbar";
 
 const Main = () => {
-  // function 문자생성기(문자) {
-  //   let arr = [...문자];
-  //   let count = 0;
-  //   let intervalId = setInterval(function () {
-  //     document.querySelector(
-  //       ".Main-Image-comment"
-  //     ).innerHTML += `<span className="cursor">${arr[count]}</span>`;
-  //     count++;
-  //     if (count === arr.length) {
-  //       document.querySelector(".Navbar-wrap").classList.add("sighted");
-  //       //document.querySelector(".scrollPleaseBox").classList.add("sighted");
-  //       clearInterval(intervalId);
-  //     }
-  //   }, 80);
-  // }
-  // 문자생성기("     ");
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

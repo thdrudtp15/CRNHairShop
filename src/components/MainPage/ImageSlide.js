@@ -74,7 +74,7 @@ function ImageSlide() {
 
   return (
     <div>
-      <div style={{ height: 70 }} />
+      <div style={{ height: "70px", background: "black" }}></div>
       <div className="IsContainer">
         <div
           className="IsBox"

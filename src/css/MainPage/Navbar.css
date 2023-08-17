@@ -8,12 +8,19 @@ div {
   display: flex;
   box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.1);
   position: fixed;
-  background: rgb(255, 255, 255);
+  background: rgba(255, 255, 255, 0.4);
   z-index: 5;
   opacity: 1;
+  transition: all 1s;
+}
+
+.nbwrap-scrollDown {
+  height: 50px;
+  background: white;
 }
 
 .Navbar-logo {
+  color: white;
   font-size: 27px;
   width: 40%;
   height: 100%;
@@ -21,10 +28,15 @@ div {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 1s;
 }
-.Navbar-logo span {
+.Navbar-logo .symbol {
   font-weight: bold;
   color: coral;
+}
+
+.nblogo-scrollDown {
+  color: black;
 }
 
 .Navbar-hidden {
@@ -98,6 +110,12 @@ div {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
+  transition: all 1s;
+}
+
+.nbcatg-scrollDown {
+  color: black;
 }
 
 .Navbar-categorybox {

@@ -12,6 +12,10 @@ const Navbar = () => {
   let [RESERVE, setRESERCE] = useState("RESERVE");
   let [NOTICE, setNOTICE] = useState("NOTICE");
 
+  let [nbWrap, setNbWrap] = useState("");
+  let [nbLogo, setNbLogo] = useState("");
+  let [nbCatg, setNbCatg] = useState("");
+
   useEffect(() => {
     let resizeEvent = function () {
       if (this.innerWidth > 996) {
@@ -19,10 +23,25 @@ const Navbar = () => {
       }
     };
 
-    window.addEventListener("resize", resizeEvent);
+    const scrollEvent = function () {
+      console.log(window.scrollY);
+      let scroll = window.scrollY;
+      if (scroll > 100) {
+        setNbWrap("nbwrap-scrollDown");
+        setNbLogo("nblogo-scrollDown");
+        setNbCatg("nbcatg-scrollDown");
+      } else {
+        setNbWrap("");
+        setNbLogo("");
+        setNbCatg("");
+      }
+    };
 
+    window.addEventListener("resize", resizeEvent);
+    window.addEventListener("scroll", scrollEvent);
     return () => {
       window.removeEventListener("resize", resizeEvent);
+      window.removeEventListener("scroll", scrollEvent);
     };
   }, []);
 
@@ -39,14 +58,15 @@ const Navbar = () => {
       {navbarOpen === "Navbar-hidden-open" && (
         <div className="screenBlack"></div>
       )}
-      <div className="Navbar-wrap">
-        <div
-          className="Navbar-logo"
-          onClick={() => {
-            navigate("/p");
-          }}
-        >
-          <span>채리니</span>헤어샵
+      <div className={`Navbar-wrap ${nbWrap}`}>
+        <div className={`Navbar-logo ${nbLogo}`}>
+          <span
+            onClick={() => {
+              navigate("/");
+            }}
+          >
+            <span className="symbol">채리니</span>헤어샵
+          </span>
         </div>
         {/*홈페이지 너비를 줄였을 때 */}
         <div className="Navbar-hidden">
@@ -93,21 +113,29 @@ const Navbar = () => {
         {/*홈페이지 너비가 정상 너비일 때 */}
         <div className="Navbar-category-wrap">
           <div className="Navbar-categorybox">
-            <NavLinkLSize text="ABOUT" navigate={navigate} nav="about/about" />
+            <NavLinkLSize
+              text="ABOUT"
+              navigate={navigate}
+              nav="about/about"
+              style={nbCatg}
+            />
             <NavLinkLSize
               text="RESERVE"
               navigate={navigate}
               nav="reserve/reservation"
+              style={nbCatg}
             />
             <NavLinkLSize
               text="NOTICE"
               navigate={navigate}
               nav="notice/notice"
+              style={nbCatg}
             />
             <NavLinkLSize
               text="GELLARY"
               navigate={navigate}
               nav="gellary/gellary"
+              style={nbCatg}
             />
           </div>
         </div>
@@ -140,10 +168,10 @@ const NavLinkMSize = ({ nav, navigate, text, setter, ctext }) => {
   );
 };
 
-const NavLinkLSize = ({ nav, navigate, text }) => {
+const NavLinkLSize = ({ nav, navigate, text, style }) => {
   return (
     <div
-      className="Navbar-category"
+      className={`Navbar-category ${style}`}
       onClick={() => {
         navigate(`/${nav}`);
       }}

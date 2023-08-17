@@ -14,24 +14,35 @@ div {
     display: flex;
     box-shadow: 0 2px 15px 0 rgba(0,0,0,.1);
     position: fixed;
-    background: rgb(255, 255, 255);
+    background: rgb(255,255,255,0.4);
     z-index: 5;
-    
     opacity: 1;
+    transition: all 1s;
 }
 
+.nbwrap-scrollDown {
+    height: 50px;
+    background: white;
+}
 
 .Navbar-logo{
-    span {
+    .symbol {
         font-weight: bold;
         color: coral;
     }
+    color:white;
     font-size: 27px;
     width: 40%;
     height: 100%;
     cursor: pointer;
     @include flex(center);
+    transition:  all 1s;
 }
+
+.nblogo-scrollDown {
+    color:black;
+}
+
 
 .Navbar-hidden {
         div{
@@ -104,7 +115,14 @@ div {
     width: 60%;
     height: 100%;
    @include flex(center);
+   color:white;
+   transition: all 1s;
 }
+.nbcatg-scrollDown {
+    color : black;
+}
+
+
 
 .Navbar-categorybox{
     height: 100%;

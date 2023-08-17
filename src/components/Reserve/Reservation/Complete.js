@@ -1,6 +1,7 @@
 import "../../../css/Reserve/Resv/Complete.css";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { useEffect } from "react";
 function Complete({
   code,
   selectService,
@@ -9,6 +10,7 @@ function Complete({
   price,
   selectTime,
   selectDate,
+  setMode,
 }) {
   const infoArray = [
     {
@@ -40,12 +42,12 @@ function Complete({
   const cancelReservation = () => {
     const result = window.confirm("예약을 취소하시겠습니까?");
     if (result) {
-      let formData = new FormData();
-      formData.append("code", code);
-      formData.append("name", resvName);
-      formData.append("phone", resvPhone);
       axios
-        .post("http://localhost:8080/reservation/cancel", formData)
+        .post("http://localhost:8080/reservation/cancel", {
+          code: code,
+          name: resvName,
+          phone: resvName,
+        })
         .then((res) => {
           alert(res.data);
           navigate("/");
@@ -55,6 +57,11 @@ function Complete({
         });
     }
   };
+  useEffect(() => {
+    return () => {
+      setMode(false);
+    };
+  }, []);
 
   return (
     <div className="Complete-wrap">

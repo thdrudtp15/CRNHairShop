@@ -70,7 +70,6 @@ function About() {
   return (
     <div className="About-wrap">
       <Navbar />
-      <div style={{ height: 70 }}></div>
       {obj[id]}
       {obj2[detail]}
 

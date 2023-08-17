@@ -104,50 +104,7 @@ function ReserveContent({ mode, setMode }) {
   if (mode === false) {
     return (
       <div>
-        {/* <ReservationProgress mode={mode} /> */}
-        {/* <div
-          style={{
-            width: 1100,
-            height: 100,
-            border: "1px solid gray",
-            margin: "0 auto",
-            marginTop: 50,
-          }}
-        >
-          여기다가 뭔가 안내문 같은 거 적으면 좋을듯 매주 화요일 휴무 점심시간
-          같은 거?
-        </div> */}
         <div className="Content-wrap">
-          {/* <div className="scheduleBox">
-            <DatePicker
-              selected={selectDate}
-              onChange={(date) => onChnageDate(date)}
-              filterDate={지난날제외}
-              locale={ko}
-              dateFormat="yyyy-MM-dd"
-              inline
-            />
-            <div className="timeSelectBox">
-              <div className="date">
-                <div className="tsb1 positionCenter">날짜</div>
-                <div className="tsb2 positionCenter">
-                  {selectDate.toISOString().slice(0, 10)}
-                </div>
-              </div>
-              <div className="date">
-                <div className="tsb1 positionCenter">시간</div>
-                <div className="tsb2 positionCenter" id="date">
-                  {selectTime === "" ? (
-                    <span style={{ color: "gray" }}>시간을 선택해주세요</span>
-                  ) : (
-                    <span>{selectTime}</span>
-                  )}
-                </div>
-              </div>
-              <Timesec arr={오전} tit="오전" setter={onChnageTime} />
-              <Timesec arr={오후} tit="오후" setter={onChnageTime} />
-            </div>
-          </div> */}
           <Schedule
             selectDate={selectDate}
             selectTime={selectTime}
@@ -185,6 +142,7 @@ function ReserveContent({ mode, setMode }) {
           price={price}
           selectDate={selectDate}
           selectTime={selectTime}
+          setMode={setMode}
         />
       </div>
     );
