@@ -20,13 +20,21 @@ function Schedule({
   const sundayIndex = 0;
   const saturdayIndex = 6;
 
-  const weekendColor = (date) => {
+  const SundayColor = (date) => {
     const dayIndex = date.getDay();
-    return dayIndex === sundayIndex || dayIndex === saturdayIndex;
+    return dayIndex === sundayIndex;
+  };
+
+  const SaturdayColor = (date) => {
+    const dayIndex = date.getDay();
+    return dayIndex === saturdayIndex;
   };
   const dayClassName = (date) => {
-    if (weekendColor(date)) {
+    if (SundayColor(date)) {
       return "sunday"; // CSS 클래스 이름
+    }
+    if (SaturdayColor(date)) {
+      return "saturday";
     }
     return null; // 일반적인 날짜의 경우 클래스를 지정하지 않음
   };

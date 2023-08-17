@@ -55,7 +55,7 @@
     color:red !important;
 }
 .saturday{
-    color :blue !important;
+    color :rgb(94, 94, 253) !important;
 }
 .react-datepicker__day--disabled {
     color : #7a7a7a !important;
@@ -108,7 +108,9 @@
 }
 
 
-
+.react-datepicker__day--selected{
+    color : white !important;
+}
 
 
 @media screen and (max-width : 556px) {
