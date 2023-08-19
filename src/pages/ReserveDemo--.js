@@ -5,6 +5,7 @@ import Footer from "../components/MainPage/Footer";
 import NoticeContent from "../components/Notice/NoticeContent";
 import ShopLocation from "../components/About/ShopLoaction/ShopLocation";
 import ResvInqContent from "../components/Reserve/ReservationInquiry/ResvInqContent";
+import Gellary from "../components/Gellary/Gellary";
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
@@ -57,6 +58,19 @@ function About() {
         param={detail}
       />
     ),
+    gellary: (
+      <Banner
+        text="GELLARY"
+        arr={[
+          {
+            name: "갤러리",
+            path: "gellary/gellary",
+            id: "gellary",
+          },
+        ]}
+        param={detail}
+      />
+    ),
   };
 
   let obj2 = {
@@ -65,6 +79,7 @@ function About() {
     notice: <NoticeContent />,
     about: <div>원장님소개</div>,
     location: <ShopLocation />,
+    gellary: <Gellary />,
   };
 
   return (
