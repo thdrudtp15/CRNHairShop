@@ -60,7 +60,7 @@ function NoticeList() {
       })
       .catch((e) => {
         alert("네트워크 통신이 원활하지 않습니다!");
-        setLoading(true);
+        setLoading(false);
         console.log(e);
       });
   }, [nowPage]);
@@ -79,17 +79,6 @@ function NoticeList() {
       }
     }
   };
-
-  // function 공지입력() {
-  //   axios
-  //     .post("/notice/write", {})
-  //     .then((res) => {
-  //       console.log(res.data);
-  //     })
-  //     .catch((e) => {
-  //       console.log(e);
-  //     });
-  // }
 
   console.log(data);
   return (

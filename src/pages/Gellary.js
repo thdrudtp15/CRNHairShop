@@ -1,6 +1,7 @@
 import Navbar from "../components/MainPage/Navbar";
 import Footer from "../components/MainPage/Footer";
 import Banner from "../components/Common/Banner";
+import GellaryContent from "../components/Gellary/GellaryContent";
 import { useParams } from "react-router-dom";
 
 function Gellary() {
@@ -21,6 +22,7 @@ function Gellary() {
         ]}
         param={detail}
       />
+      {detail === "gellary" && <GellaryContent />}
       <Footer />
     </div>
   );

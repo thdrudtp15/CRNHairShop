@@ -1,0 +1,79 @@
+.card-container {
+  min-height: 700px;
+}
+
+.card-box {
+  width: 33%;
+  height: 450px;
+  padding: 30px;
+  float: left;
+}
+
+.cb::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.card {
+  height: 100%;
+  width: 100%;
+  background: rgba(228, 228, 228, 0.171);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.card:hover {
+  background: #eee;
+}
+
+.card:hover .card-photo img {
+  transform: scale(1.2);
+}
+
+.card-photoBox {
+  width: 100%;
+  height: 70%;
+  padding: 20px;
+}
+
+.card-photo {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.card-photo img {
+  transition: all 0.5s;
+  width: 100%;
+  height: 100%;
+}
+
+.card-infoBox {
+  width: 100%;
+  height: 30%;
+  padding: 10px 30px;
+}
+
+.card-subject {
+  font-size: 21px;
+  font-weight: bold;
+  height: 70px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-date {
+  float: left;
+  color: rgb(177, 177, 177);
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.card-view {
+  float: right;
+  color: rgb(177, 177, 177);
+  font-size: 13px;
+  font-weight: bold;
+}/*# sourceMappingURL=GellaryCard.css.map */
