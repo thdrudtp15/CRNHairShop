@@ -7,8 +7,8 @@ import { useState } from "react";
 import { useParams } from "react-router-dom";
 
 function Reservation() {
-  const { detail } = useParams();
   const [mode, setMode] = useState(false);
+  const [tool, setTool] = useState(0);
 
   return (
     <div>
@@ -19,21 +19,16 @@ function Reservation() {
         arr={[
           {
             name: "실시간예약",
-            path: "reserve/reservation",
-            id: "reservation",
           },
           {
             name: "예약조회",
-            path: "reserve/reservationcheck",
-            id: "reservationcheck",
           },
         ]}
-        param={detail}
+        setTool={setTool}
+        tool={tool}
       />
-      {detail === "reservation" && (
-        <ReserveContent setMode={setMode} mode={mode} />
-      )}
-      {detail === "reservationcheck" && <ResvInqContent />}
+      {tool === 0 && <ReserveContent setMode={setMode} mode={mode} />}
+      {tool === 1 && <ResvInqContent />}
 
       <Footer />
     </div>

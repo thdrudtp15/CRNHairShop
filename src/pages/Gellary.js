@@ -2,10 +2,12 @@ import Navbar from "../components/MainPage/Navbar";
 import Footer from "../components/MainPage/Footer";
 import Banner from "../components/Common/Banner";
 import GellaryContent from "../components/Gellary/GellaryContent";
-import { useParams } from "react-router-dom";
+import { useParams, useSearchParams } from "react-router-dom";
+import { useState } from "react";
 
 function Gellary() {
   const { detail } = useParams();
+  const [tool, setTool] = useState(0);
 
   return (
     <div>
@@ -16,13 +18,12 @@ function Gellary() {
         arr={[
           {
             name: "갤러리",
-            path: "gellary/gellary",
-            id: "gellary",
           },
         ]}
-        param={detail}
+        tool={tool}
+        setTool={setTool}
       />
-      {detail === "gellary" && <GellaryContent />}
+      {tool === 0 && <GellaryContent />}
       <Footer />
     </div>
   );

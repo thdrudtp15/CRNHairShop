@@ -76,7 +76,7 @@ function Notice() {
         <button
           className="자세히보기"
           onClick={() => {
-            navigate("/notice/notice");
+            navigate("/notice");
           }}
         >
           자세히보기

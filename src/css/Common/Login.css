@@ -1,0 +1,37 @@
+
+
+.login-wrap {
+    width: 100%;
+    height: 100vh;
+    background: #eee;
+}
+
+
+
+.login-container {
+    width: 446px;
+    /* border: 1px solid black; */
+    margin: 0 auto;
+    padding-top: 350px;
+}
+
+.login-area {
+    height: 300px;
+    width: 100%;
+    background: wheat;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-inputBox {
+    margin-bottom: 15px;
+}
+.login-inputBox input {
+    margin-top: 5px;
+    height: 23px;
+    border: none;
+    border-radius: 10px;
+}

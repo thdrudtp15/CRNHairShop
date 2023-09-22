@@ -6,8 +6,8 @@ function ImageSlide() {
   //이미지 경로 담기
   //====================
   let imgarr = [
-    "http://riahn.co.kr/niabbs5/upload/userfile/o_1gq8scabf67c1rmhfbt1s6f1p9ta.jpg",
-    "http://riahn.co.kr/niabbs5/upload/userfile/o_1h40gkg4c146m1btmqhf1s4f1sela.jpg",
+    "https://i.esdrop.com/d/f/2DJRPYKvvz/BcCHw1vUa0.jpg",
+    "https://i.esdrop.com/d/f/2DJRPYKvvz/HvKrhWjk5S.jpg",
     "http://riahn.co.kr/niabbs5/upload/userfile/o_1h40gjqmf10d5al75gl1dhv1qsja.jpg",
   ];
 
@@ -81,13 +81,14 @@ function ImageSlide() {
           style={{ width: `${imgarr.length * 100}%` }}
           id="Box"
         >
-          {imgarr.map(function (a, i) {
+          {imgarr.map(function (src, index) {
             return (
               <img
                 className="IsImg"
-                key={i}
-                src={a}
+                key={index}
+                src={src}
                 style={{ width: `${100 / imgarr.length}%` }}
+                alt=""
               />
             );
           })}

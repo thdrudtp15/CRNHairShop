@@ -81,28 +81,28 @@ const Navbar = () => {
         <div className={`Navbar-hidden-close ${navbarOpen}`}>
           <div className="Navbar-hidden-list">
             <NavLinkMSize
-              nav="ABOUT"
+              nav="about"
               navigate={navigate}
               text={ABOUT}
               setter={setABOUT}
               ctext="소개"
             />
             <NavLinkMSize
-              nav="PRICE"
+              nav="price"
               navigate={navigate}
               text={PRICE}
               setter={setPRICE}
               ctext="가격"
             />
             <NavLinkMSize
-              nav="RESERVE"
+              nav="reserve"
               navigate={navigate}
               text={RESERVE}
               setter={setRESERCE}
               ctext="예약"
             />
             <NavLinkMSize
-              nav="NOTICE"
+              nav="notice"
               navigate={navigate}
               text={NOTICE}
               setter={setNOTICE}
@@ -116,25 +116,25 @@ const Navbar = () => {
             <NavLinkLSize
               text="ABOUT"
               navigate={navigate}
-              nav="about/about"
+              nav="about"
               style={nbCatg}
             />
             <NavLinkLSize
               text="RESERVE"
               navigate={navigate}
-              nav="reserve/reservation"
+              nav="reserve"
               style={nbCatg}
             />
             <NavLinkLSize
               text="NOTICE"
               navigate={navigate}
-              nav="notice/notice"
+              nav="notice"
               style={nbCatg}
             />
             <NavLinkLSize
               text="GELLARY"
               navigate={navigate}
-              nav="gellary/gellary"
+              nav="gellary"
               style={nbCatg}
             />
           </div>

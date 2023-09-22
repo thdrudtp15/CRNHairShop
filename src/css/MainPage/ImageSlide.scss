@@ -16,6 +16,7 @@ div {
     .IsImg{
         height: 100%;
         float: left;
+        object-fit: cover;
         // background: rgb(121, 28, 228);
     }
 }
