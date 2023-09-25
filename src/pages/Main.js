@@ -1,6 +1,6 @@
 import Navbar from "../components/MainPage/Navbar";
 import Footer from "../components/MainPage/Footer";
-import "../css/Main.css";
+import "../css/Common/Main.css";
 import { useEffect } from "react";
 import ImageSlide from "../components/MainPage/ImageSlide";
 import Notice from "../components/MainPage/Notice";

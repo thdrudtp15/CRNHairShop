@@ -24,7 +24,6 @@ const Navbar = () => {
     };
 
     const scrollEvent = function () {
-      console.log(window.scrollY);
       let scroll = window.scrollY;
       if (scroll > 100) {
         setNbWrap("nbwrap-scrollDown");

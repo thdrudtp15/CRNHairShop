@@ -4,11 +4,6 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../../css/MainPage/Notice.css";
 
-//==============================
-//공지사항 같은 경우는 백엔드 작업이 필요함.
-//임의의 데이터를 json으로 만들어 작업.
-//==============================
-
 function Notice() {
   const [NoticeData, setData] = useState([]);
   const navigate = useNavigate();
@@ -17,6 +12,7 @@ function Notice() {
       const title = document.querySelector(".제목");
       const noticeArr = document.querySelectorAll(".공지");
 
+      //정적 이벤트 지점 수정 필요
       if (this.scrollY >= 1400) {
         title.classList.add("제목올려");
       } else {
@@ -41,7 +37,7 @@ function Notice() {
 
   useEffect(() => {
     axios
-      .get("/notice/get", {
+      .get("/notice/getall", {
         params: {
           size: 5,
           page: 0,

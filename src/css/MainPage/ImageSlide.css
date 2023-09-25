@@ -16,6 +16,8 @@ div {
 .IsContainer .IsImg {
   height: 100%;
   float: left;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .NumberBtnBox {

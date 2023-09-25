@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../../css/Notice/NoticeContent.css";
 
 function NoticeList() {
@@ -9,6 +10,7 @@ function NoticeList() {
   const [pages, setPages] = useState([]);
   const [nowPageStatus, setNowPageStatus] = useState([]);
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
   const openNotice = (i) => {
     if (openStatus[i].status === false) {
@@ -26,12 +28,13 @@ function NoticeList() {
     }
   };
 
-  useEffect(() => {
+  const dataCommunication = () => {
     axios
-      .get("/notice/get", {
+      .get("/notice/getall", {
         params: {
           size: 8,
           page: nowPage,
+          sort: "id,desc",
         },
       })
       .then((res) => {
@@ -57,13 +60,32 @@ function NoticeList() {
         }
         setNowPageStatus(stArr);
         setLoading(true);
+        //자바스크립트 없이 state값으로 스타일을 주고싶었나보다...
       })
       .catch((e) => {
         alert("네트워크 통신이 원활하지 않습니다!");
         setLoading(false);
         console.log(e);
       });
+  };
+
+  useEffect(() => {
+    dataCommunication();
   }, [nowPage]);
+
+  const onDelete = (id) => {
+    if (window.confirm("삭제하시겠습니까?")) {
+      axios
+        .post("/notice/delete", { id })
+        .then((res) => {
+          alert("삭제되었습니다.");
+          dataCommunication();
+        })
+        .catch((e) => {
+          console.log(e);
+        });
+    }
+  };
 
   const onChangeNowPage = (num) => {
     setNowPage(num);
@@ -80,16 +102,8 @@ function NoticeList() {
     }
   };
 
-  console.log(data);
   return (
     <div>
-      {/* <button
-        onClick={() => {
-          공지입력();
-        }}
-      >
-        버튼
-      </button> */}
       {data.length === 0 && (
         <div className="nonexistentData">공지사항이 없습니다.</div>
       )}
@@ -122,6 +136,22 @@ function NoticeList() {
             </div>
             <div className={`notice-detail ${openStatus[i].status && "Open"}`}>
               <div className="notice-content">{a.content}</div>
+              <div>
+                <button
+                  onClick={() => {
+                    onDelete(a.id);
+                  }}
+                >
+                  삭제
+                </button>
+                <button
+                  onClick={() => {
+                    navigate(`/notice/edit/${a.id}`);
+                  }}
+                >
+                  수정
+                </button>
+              </div>
             </div>
           </div>
         );
